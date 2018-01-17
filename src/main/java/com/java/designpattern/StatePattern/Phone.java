@@ -13,7 +13,7 @@ public class Phone {
     public State state;
 
     /**
-     * @description 构造方法
+     *   构造方法
      * @author      manajay.dlj@gmail.com
      * @date        2017/9/19 0019 15:29
      * @version     V1.0
@@ -32,7 +32,7 @@ public class Phone {
     }
 
     /**
-     * @description 拨打电话
+     *   拨打电话
      * @author      manajay.dlj@gmail.com
      * @date        2017/9/19 0019 15:29
      * @version     V1.0
@@ -42,7 +42,7 @@ public class Phone {
     }
 
     /**
-     * @description 发送短信
+     *   发送短信
      * @author      manajay.dlj@gmail.com
      * @date        2017/9/19 0019 15:29
      * @version     V1.0
@@ -52,7 +52,7 @@ public class Phone {
     }
 
     /**
-     * @description 上网冲浪
+     *   上网冲浪
      * @author      manajay.dlj@gmail.com
      * @date        2017/9/19 0019 15:29
      * @version     V1.0

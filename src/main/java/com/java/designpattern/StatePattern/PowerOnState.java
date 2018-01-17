@@ -39,7 +39,7 @@ public class PowerOnState implements State {
     }
 
     /**
-     * @description 消耗电量的行为
+     *   消耗电量的行为
      *               额外，自己独有的行为
      * @author      manajay.dlj@gmail.com
      * @date        2017/9/19 0019 15:33
