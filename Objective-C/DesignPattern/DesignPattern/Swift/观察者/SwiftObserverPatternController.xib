@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwiftObserverPatternController" customModule="DesignPattern" customModuleProvider="target">
+            <connections>
+                <outlet property="funcSwitch" destination="yLG-9j-IMI" id="CmY-uG-fjL"/>
+                <outlet property="infoTextView" destination="bcf-zf-MOB" id="U5u-1c-ns2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcf-zf-MOB" customClass="KVOTextView" customModule="DesignPattern" customModuleProvider="target">
+                    <rect key="frame" x="10" y="70" width="355" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="gGE-Db-fbT"/>
+                    </constraints>
+                    <string key="text">- 使用条件
+    - 有两个抽象类型相互依赖. 将它们封装到各自的对象中, 就可以对它们单独进行改变和复用了
+    - 对一个对象的改变需要同时改变其他对象, 而且不知道具体有多少对象有待改变
+    - 一个对象必须通知其他对象 ,而它又不知道其他对象是什么.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yLG-9j-IMI">
+                    <rect key="frame" x="163" y="536" width="51" height="31"/>
+                    <color key="onTintColor" red="0.92941176469999998" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="valueChange:" destination="-1" eventType="valueChanged" id="Xcz-XF-vbo"/>
+                    </connections>
+                </switch>
+            </subviews>
+            <color key="backgroundColor" red="0.5" green="0.77071750383435578" blue="0.49629745015337423" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="yLG-9j-IMI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Bxg-Jf-KDi"/>
+                <constraint firstItem="bcf-zf-MOB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="hip-0N-6qK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bcf-zf-MOB" secondAttribute="trailing" constant="10" id="sqi-qr-JhA"/>
+                <constraint firstItem="bcf-zf-MOB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="wzR-cv-Cgy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yLG-9j-IMI" secondAttribute="bottom" constant="100" id="yc7-nX-40w"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

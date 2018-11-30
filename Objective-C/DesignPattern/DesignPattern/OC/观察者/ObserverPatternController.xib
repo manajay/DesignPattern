@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ObserverPatternController">
+            <connections>
+                <outlet property="slide" destination="6BD-h2-Ksl" id="oMw-JD-YBe"/>
+                <outlet property="textView" destination="KR6-Dp-Ght" id="2ZF-B2-nY8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.80000000000000004" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6BD-h2-Ksl">
+                    <rect key="frame" x="98" y="70" width="179" height="31"/>
+                </slider>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve3-hA-6tg">
+                    <rect key="frame" x="156.5" y="318.5" width="62" height="30"/>
+                    <state key="normal" title="通知清空"/>
+                    <connections>
+                        <action selector="sendNotification:" destination="-1" eventType="touchUpInside" id="hCa-De-Beu"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="我充满了 coding 的热情" borderStyle="roundedRect" placeholder="被清空了" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esf-Zg-nuV" customClass="NotifyTextField">
+                    <rect key="frame" x="14" y="398.5" width="347" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut  " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KR6-Dp-Ght">
+                    <rect key="frame" x="0.0" y="458.5" width="375" height="188.5"/>
+                    <color key="backgroundColor" red="0.92941176469999998" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KR6-Dp-Ght" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="1HE-5W-YuJ"/>
+                <constraint firstItem="6BD-h2-Ksl" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="100" id="1rZ-hY-x4u"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="6BD-h2-Ksl" secondAttribute="trailing" constant="100" id="EA9-C5-ScF"/>
+                <constraint firstItem="esf-Zg-nuV" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="14" id="KJ4-AS-nFc"/>
+                <constraint firstItem="esf-Zg-nuV" firstAttribute="top" secondItem="Ve3-hA-6tg" secondAttribute="bottom" constant="50" id="TMk-O2-maz"/>
+                <constraint firstItem="6BD-h2-Ksl" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="TtR-yL-tSb"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="KR6-Dp-Ght" secondAttribute="trailing" id="Ycl-g3-It2"/>
+                <constraint firstItem="KR6-Dp-Ght" firstAttribute="top" secondItem="esf-Zg-nuV" secondAttribute="bottom" constant="30" id="ZNb-9F-hVi"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="esf-Zg-nuV" secondAttribute="trailing" constant="14" id="nAV-t7-4FT"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="KR6-Dp-Ght" secondAttribute="bottom" constant="20" id="tpd-QH-n0S"/>
+                <constraint firstItem="Ve3-hA-6tg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zg4-4r-re6"/>
+                <constraint firstItem="Ve3-hA-6tg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zlu-ih-30q"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>
